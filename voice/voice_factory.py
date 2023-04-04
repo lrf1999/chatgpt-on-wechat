@@ -17,4 +17,10 @@ def create_voice(voice_type):
     elif voice_type == 'openai':
         from voice.openai.openai_voice import OpenaiVoice
         return OpenaiVoice()
+    elif voice_type == 'pytts':
+        from voice.pytts.pytts_voice import PyttsVoice
+        return PyttsVoice()
+    elif voice_type == 'azure':
+        from voice.azure.azure_voice import AzureVoice
+        return AzureVoice()
     raise RuntimeError
